@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+
+# environments
+venv/
+env/
+
+# node
+node_modules/
+
+# builds
+frontend/dist/
+backend/static/
+
+# uploads
+backend/uploads/
+
+# secrets
+.env
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

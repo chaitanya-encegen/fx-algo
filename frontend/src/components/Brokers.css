@@ -1,0 +1,129 @@
+/* ===============================
+   SECTION
+================================== */
+
+.brokers-section {
+  padding: 80px 20px 0;
+  text-align: center;
+  overflow: hidden;
+
+  /* background image */
+  background-image:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url("/logos/brokerbg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.brokers-title {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* ===============================
+   CONTINUOUS SLIDERS
+================================== */
+
+.logo-loop {
+  overflow: hidden;
+  width: 100%;
+  margin: 70px 0;
+}
+
+.logo-track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  animation: loop 40s linear infinite;
+}
+
+.logo-loop.reverse .logo-track {
+  animation-direction: reverse;
+}
+
+.logo-item {
+  width: 70px;
+  height: 70px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ===============================
+   BOTTOM NEON LINE
+================================== */
+
+/* ===============================
+   BOTTOM THIN NEON LINE (FIXED)
+================================== */
+
+.bottom-line {
+  margin-top: 40px;
+  height: 5px;            /* 🔥 thin line */
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    #00c6ff,
+    #8b5cf6,
+    #ec4899
+  );
+  position: relative;
+}
+
+/* soft glow */
+.bottom-line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(6px);
+  opacity: 0.7;
+}
+
+
+/* ===============================
+   ANIMATION
+================================== */
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+================================== */
+
+@media (max-width: 900px) {
+  .brokers-title {
+    font-size: 28px;
+  }
+  .logo-item {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 500px) {
+  .brokers-title {
+    font-size: 22px;
+  }
+  .logo-track {
+    animation-duration: 55s;
+  }
+}

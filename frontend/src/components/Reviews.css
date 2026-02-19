@@ -1,0 +1,114 @@
+.reviews-section {
+  min-height: 100vh;
+  padding: 80px 40px;
+  background: url("/review bg.jpg") center/cover no-repeat;
+  position: relative;
+  color: #fff;
+}
+
+.reviews-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.review-card {
+  background: #fff;
+  color: #000;
+  padding: 20px 22px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: transform .3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+}
+
+.stars-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.stars {
+  background: #00b67a;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.verified {
+  font-size: 13px;
+  color: #00b67a;
+  font-weight: 600;
+}
+
+.user-line {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.review-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.trustpilot-btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.trustpilot-btn {
+  padding: 14px 40px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.trustpilot-btn:hover {
+  background: #60d572;
+  color: #000;
+}
+
+.bottom-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  width: 100%;
+  background: linear-gradient(to right, #00c6ff, #ff0066);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .reviews-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}

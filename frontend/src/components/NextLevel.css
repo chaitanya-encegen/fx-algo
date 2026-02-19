@@ -1,0 +1,202 @@
+/* ===============================
+   SECTION
+================================== */
+
+.next-section {
+  padding: 100px 20px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  /* attractive professional background */
+  background:
+    radial-gradient(circle at right bottom, rgba(0,255,255,0.18), transparent 45%),
+    radial-gradient(circle at left top, rgba(120,0,255,0.18), transparent 45%),
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    url("/logos/brokerbg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.next-title {
+  color: white;
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 70px;
+}
+
+/* ===============================
+   GRID
+================================== */
+
+.next-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ===============================
+   CARD
+================================== */
+
+.next-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  animation: fadeUp 0.8s ease both;
+}
+
+.next-card:nth-child(1) { animation-delay: 0.1s; }
+.next-card:nth-child(2) { animation-delay: 0.2s; }
+.next-card:nth-child(3) { animation-delay: 0.3s; }
+.next-card:nth-child(4) { animation-delay: 0.4s; }
+.next-card:nth-child(5) { animation-delay: 0.5s; }
+.next-card:nth-child(6) { animation-delay: 0.6s; }
+.next-card:nth-child(7) { animation-delay: 0.7s; }
+.next-card:nth-child(8) { animation-delay: 0.8s; }
+
+/* ===============================
+   ICON
+================================== */
+
+.next-icon {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #10f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+  margin-bottom: 14px;
+  transition: 0.4s ease;
+
+  /* professional animation */
+  animation: softFloat 6s ease-in-out infinite;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.next-card:nth-child(even) .next-icon {
+  animation-delay: 3s;
+}
+
+/* hover */
+.next-card:hover .next-icon {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0,255,255,0.35);
+}
+
+/* ===============================
+   TEXT
+================================== */
+
+.next-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.next-card span {
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+/* ===============================
+   ANIMATIONS
+================================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes softFloat {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* ===============================
+   BOTTOM TECH LINE
+================================== */
+
+.tech-bottom-line {
+  margin-top: 70px;
+  height: 5px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+ 
+}
+
+/* top gradient line */
+.tech-bottom-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(
+    100deg,
+    #00c6ff,
+    #8b5cf6,
+    #ec4899
+  );
+  box-shadow: 0 0 20px rgba(0,255,255,0.5);
+}
+
+/* vertical tech grid */
+/* .tech-bottom-line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,255,255,.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,255,.15) 1px, transparent 1px);
+  background-size: 80px 120px;
+  opacity: 0.35;
+} */
+
+/* dots */
+/* .tech-bottom-line span {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(0,255,255,.6);
+  top: 35px;
+} */
+
+/* ===============================
+   RESPONSIVE
+================================== */
+
+@media (max-width: 900px) {
+  .next-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .next-icon {
+    width: 120px;
+    height: 120px;
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 500px) {
+  .next-title {
+    font-size: 26px;
+  }
+}

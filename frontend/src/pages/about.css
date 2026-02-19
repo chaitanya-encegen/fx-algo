@@ -1,0 +1,172 @@
+/* ✅ FULL PAGE BACKGROUND */
+.about-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #090f2b, #0b1330);
+  color: white;
+}
+
+/* ================= HERO ================= */
+
+.hero-container {
+  margin: 12px 18px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Background Image Strip */
+.hero-image {
+  height: 250px;
+  background-image: url("/About us img/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 35px;
+  padding-top: 35px;
+  position: relative;
+}
+
+/* ✅ REMOVE DARKNESS HERE */
+.hero-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* No dark filter */
+  background: rgba(0, 0, 0, 0);
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-overlay h2 {
+  font-size: 34px;          /* ✅ Improved */
+  margin-bottom: 8px;
+   margin-left: 8px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.hero-overlay p {
+  font-size: 15px;          /* ✅ Improved */
+  opacity: 0.75;
+    margin-left: 12px;
+  font-weight: 400;
+}
+
+/* FX ALGO Band */
+.hero-band {
+  background: #16162b;
+  text-align: center;
+  padding: 16px 10px;
+}
+
+.hero-band h3 {
+  font-size: 30px;          /* ✅ Improved */
+  margin-bottom: 6px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.hero-band p {
+  font-size: 18px;          /* ✅ Improved */
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.band-underline {
+  width: 75px;
+  height: 3px;
+  background: #00c8ff;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+/* ================= CONTENT ================= */
+
+.content-section {
+  margin: 18px;
+  padding: 28px;
+  border-radius: 14px;
+
+  display: flex;
+  gap: 35px;
+
+  background: linear-gradient(135deg, #0f1b3d, #0b1330);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* LEFT */
+.content-left {
+  flex: 1;
+}
+
+.content-left h3 {
+  font-size: 28px;
+  margin-left: 10px;
+  margin-top: 25px;        /* ✅ Improved */
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.content-left p {
+  font-size: 17px;          /* ✅ Improved */
+  line-height: 1.75;
+  opacity: 0.72;
+  margin-bottom: 18px;
+  font-weight: 400;
+   margin-left: 10px;
+ 
+}
+
+.content-left ul {
+  list-style: none;
+}
+
+.content-left li {
+  font-size: 17 px;          /* ✅ Improved */
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  font-weight: 500;
+   margin-left: 10px;
+}
+
+.content-left li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  font-size: 12px;
+  color: #00c8ff;
+}
+
+/* RIGHT IMAGE */
+.content-right {
+  flex: 1;
+}
+
+.content-right img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .content-section {
+    flex-direction: column;
+  }
+
+  .content-right img {
+    height: 220px;
+  }
+}

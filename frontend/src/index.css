@@ -1,0 +1,24 @@
+@import "tailwindcss";
+body {
+  cursor: none;
+}
+
+.golden-title {
+  font-family: 'Great Vibes', cursive;
+  background: linear-gradient(
+    90deg,
+    #ffcc33,
+    #ffdd55,
+    #ffb700,
+    #fff2a8,
+    #ffcc33
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    0 0 8px rgba(255, 204, 51, 0.8),
+    0 0 15px rgba(255, 184, 0, 0.7),
+    0 0 25px rgba(255, 153, 0, 0.6);
+  letter-spacing: 2px;
+
+}

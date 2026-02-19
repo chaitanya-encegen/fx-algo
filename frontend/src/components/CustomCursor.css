@@ -1,0 +1,26 @@
+body, html {
+  cursor: none;
+}
+.CustomCursor {
+  pointer-events: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  filter: url("#goo");
+  -webkit-filter: url("#goo");
+}
+/* Each .CursorDot is created in the JS */
+.CursorDot {
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 20px;
+  background-color: #e9b636;
+  /* For transitions if desired: */
+  /* transition: transform 0.1s linear; */
+  pointer-events: none;
+}
