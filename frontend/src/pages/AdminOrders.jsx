@@ -13,7 +13,7 @@ export default function AdminOrders() {
       },
     })
       .then((res) => res.json())
-      .then((data) => setOrders(data));
+      .then((data) => setOrders(Array.isArray(data) ? data : []));
   }, []);
 
   return (

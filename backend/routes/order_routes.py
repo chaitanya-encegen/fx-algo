@@ -4,7 +4,7 @@ from extensions import db
 from models.order import Order
 from models.order_item import OrderItem
 from models.product import Product
-
+from flask import Blueprint, request, jsonify
 order_bp = Blueprint("orders", __name__)
 
 @order_bp.post("/")
@@ -64,3 +64,23 @@ def create_order():
     db.session.commit()
 
     return {"order_id": order.id, "amount": total}
+
+@order_bp.get("")
+@order_bp.get("/")
+@jwt_required()
+def get_orders():
+
+    orders = Order.query.order_by(Order.id.desc()).all()
+
+    result = []
+
+    for o in orders:
+        result.append({
+            "id": o.id,
+            "userId": o.user_id,
+            "total": o.total_amount,
+            "status": o.status if hasattr(o, "status") else "Placed",
+            "createdAt": o.created_at.strftime("%Y-%m-%d %H:%M")
+        })
+
+    return jsonify(result)

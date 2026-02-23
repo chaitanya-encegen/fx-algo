@@ -283,7 +283,7 @@ export default function Checkout() {
           {cart.map((item) => (
             <div key={item.id} className="flex justify-between text-sm mb-2">
               <span>{item.title} × {item.qty}</span>
-              <span>₹{item.price * item.qty}</span>
+              <span>${item.price * item.qty}</span>
             </div>
           ))}
 
@@ -291,7 +291,7 @@ export default function Checkout() {
 
           <div className="flex justify-between font-bold text-yellow-400">
             <span>Total</span>
-            <span>₹{cartTotal}</span>
+            <span>${cartTotal}</span>
           </div>
 
           <button

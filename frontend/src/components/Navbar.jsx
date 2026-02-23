@@ -7,7 +7,7 @@ export default function Navbar() {
   const [announcement, setAnnouncement] = useState("Loading...");
 
   useEffect(() => {
-    api.get("/api/settings/announcement")
+    api.get("/settings/announcement")
       .then(res => setAnnouncement(res.data.announcement))
       .catch(() => setAnnouncement("✨ Welcome to FX Algo"));
   }, []);

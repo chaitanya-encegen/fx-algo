@@ -61,7 +61,7 @@ export default function Cart() {
                   <div className="flex-1">
                     <h3 className="font-semibold text-lg">{item.title}</h3>
                     <p className="text-sm text-gray-400">
-                      ₹{item.price} each
+                      ${item.price} each
                     </p>
 
                     {/* QTY CONTROLS */}
@@ -89,7 +89,7 @@ export default function Cart() {
                   {/* PRICE + REMOVE */}
                   <div className="text-right space-y-2">
                     <div className="text-yellow-400 font-bold text-lg">
-                      ₹{item.price * item.qty}
+                      ${item.price * item.qty}
                     </div>
 
                     <button
@@ -111,7 +111,7 @@ export default function Cart() {
             <div className="flex justify-between mb-4">
               <span>Total</span>
               <span className="text-yellow-400 font-bold">
-                ₹{cartTotal}
+                ${cartTotal}
               </span>
             </div>
 

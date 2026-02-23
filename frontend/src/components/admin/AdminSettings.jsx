@@ -7,14 +7,14 @@ export default function AdminSettings() {
   const [text, setText] = useState("");
 
   useEffect(() => {
-    api.get("/api/settings/announcement")
+    api.get("/settings/announcement")
       .then(res => setText(res.data.announcement))
       .catch(() => alert("Failed to load announcement"));
   }, []);
 
   const save = async () => {
     try {
-      await api.put("/api/settings/announcement", {
+      await api.put("/settings/announcement", {
         announcement: text
       });
 

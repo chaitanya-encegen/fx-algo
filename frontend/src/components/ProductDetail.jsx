@@ -83,11 +83,11 @@ export default function ProductDetail() {
           <div className="flex items-center gap-4 mb-6">
             {product.old_price && (
               <span className="line-through text-gray-500 text-xl">
-                ₹{product.old_price}
+                ${product.old_price}
               </span>
             )}
             <span className="text-3xl font-bold text-orange-400">
-              ₹{product.price}
+              ${product.price}
             </span>
           </div>
 

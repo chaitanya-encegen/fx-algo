@@ -65,11 +65,11 @@ export default function ProductCard({ product }) {
 <div className="mt-2 text-[14px] text-center">
   {product.old_price && (
     <span className="line-through text-gray-400 mr-2">
-      ₹{product.old_price}
+      ${product.old_price}
     </span>
   )}
   <span className="text-orange-400 font-bold">
-    ₹{product.price}
+    ${product.price}
   </span>
 </div>
 

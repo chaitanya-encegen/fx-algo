@@ -4,8 +4,8 @@ const countries = [
   { code: "CN", name: "China", flag: "cn", amount: "$41,678" },
   { code: "AM", name: "America", flag: "am", amount: "$38,678" },
   { code: "IN", name: "India", flag: "in", amount: "$39,678" },
-  { code: "IN", name: "India", flag: "in", amount: "$45,678" },
-  { code: "CN", name: "China", flag: "cn", amount: "$39,678" },
+  { code: "CA", name: "cannda", flag: "ca", amount: "$45,678" },
+  { code: "RU", name: "Russia", flag: "ru", amount: "$39,678" },
   { code: "IN", name: "India", flag: "in", amount: "$37,678" },
 ];
 
