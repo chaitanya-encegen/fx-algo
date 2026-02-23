@@ -51,7 +51,7 @@ export default function AddProductForm({ onSubmit }) {
       <div className="flex gap-3">
         <input
           type="number"
-          placeholder="Price ₹799"
+          placeholder="Price $799"
           value={price}
           onChange={(e) => setPrice(e.target.value)}
           className="w-1/2 bg-[#2a1a4a] p-3 rounded-lg text-sm outline-none text-white placeholder-white/50"
@@ -60,7 +60,7 @@ export default function AddProductForm({ onSubmit }) {
 
         <input
           type="number"
-          placeholder="Old Price ₹4100"
+          placeholder="Old Price $4100"
           value={oldPrice}
           onChange={(e) => setOldPrice(e.target.value)}
           className="w-1/2 bg-[#2a1a4a] p-3 rounded-lg text-sm outline-none text-white placeholder-white/50"

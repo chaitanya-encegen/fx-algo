@@ -220,11 +220,11 @@ export default function AdminProducts() {
                     <div className="flex justify-center gap-2 mt-1 text-sm">
                       {p.old_price > 0 && (
                         <span className="line-through text-gray-500">
-                          ₹{p.old_price}
+                          ${p.old_price}
                         </span>
                       )}
                       <span className="text-orange-400 font-bold">
-                        ₹{p.price}
+                        ${p.price}
                       </span>
                     </div>
 
